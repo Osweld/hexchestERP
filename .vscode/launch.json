@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "HexchestApplication",
+      "request": "launch",
+      "mainClass": "com.osweld.hexchest.HexchestApplication",
+      "projectName": "hexchest",
+       "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
