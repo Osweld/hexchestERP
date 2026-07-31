@@ -3,7 +3,7 @@ package com.osweld.hexchest.identityaccess.domain.user;
 public record PasswordHash(String value) {
 
     private static final int MIN_HASH_LENGTH = 60; 
-    private static final int MAX_HASH_LENGTH = 100; 
+    private static final int MAX_HASH_LENGTH = 255; 
 
     public PasswordHash {
         if (value == null || value.isBlank()) {
