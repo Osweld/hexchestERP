@@ -90,4 +90,36 @@ class PersonNameTest {
         PersonName personName = new PersonName("John", "Doe");
         assertThat(personName.fullName()).isEqualTo("John Doe");
     }
+
+    @Test
+    @DisplayName("Should verify equality of PersonName values")
+    void testPersonNameEquality() {
+        PersonName name1 = new PersonName("John", "Doe");
+        PersonName name2 = new PersonName("John", "Doe");
+        assertThat(name1).isEqualTo(name2);
+    }
+
+    @Test
+    @DisplayName("Should verify inequality of PersonName values")
+    void testPersonNameInequality() {
+        PersonName name1 = new PersonName("John", "Doe");
+        PersonName name2 = new PersonName("Jane", "Doe");
+        assertThat(name1).isNotEqualTo(name2);
+    }
+
+    @Test
+    @DisplayName("Should return correct string representation of PersonName")
+    void testToString() {
+        PersonName personName = new PersonName("John", "Doe");
+        assertThat(personName.toString()).hasToString("John Doe");
+    }
+
+    @Test
+    @DisplayName("Should verify hashCode consistency for PersonName")
+    void testHashCodeConsistency() {
+        PersonName name1 = new PersonName("John", "Doe");
+        PersonName name2 = new PersonName("John", "Doe");
+        assertThat(name1.hashCode()).hasSameHashCodeAs(name2.hashCode());
+    }
+
 }
